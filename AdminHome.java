@@ -47,14 +47,29 @@ public class AdminHome extends javax.swing.JFrame {
         jMenu3.setText("Admin");
 
         jMenu4.setText("Etudiants");
+        jMenu4.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu4MouseClicked(evt);
+            }
+        });
         jMenu3.add(jMenu4);
         jMenu3.add(jSeparator2);
 
         jMenu6.setText("Professeurs");
+        jMenu6.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu6MouseClicked(evt);
+            }
+        });
         jMenu3.add(jMenu6);
         jMenu3.add(jSeparator3);
 
         jMenu7.setText("Classes");
+        jMenu7.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jMenu7MouseClicked(evt);
+            }
+        });
         jMenu3.add(jMenu7);
 
         jMenuBar1.add(jMenu3);
@@ -74,6 +89,24 @@ public class AdminHome extends javax.swing.JFrame {
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void jMenu4MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu4MouseClicked
+        this.dispose();
+        MaJEtudiants obj = new MaJEtudiants();
+        obj.setVisible(true);
+    }//GEN-LAST:event_jMenu4MouseClicked
+
+    private void jMenu6MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu6MouseClicked
+        this.dispose();
+        MaJProf obj = new MaJProf();
+        obj.setVisible(true);
+    }//GEN-LAST:event_jMenu6MouseClicked
+
+    private void jMenu7MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jMenu7MouseClicked
+        this.dispose();
+        MaJClasses obj = new MaJClasses();
+        obj.setVisible(true);
+    }//GEN-LAST:event_jMenu7MouseClicked
 
     /**
      * @param args the command line arguments
